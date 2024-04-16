@@ -64,6 +64,7 @@ const Home = (props) => {
   useEffect(() => {
     if (shouldUpdate === true) {
       (async () => {
+        setIsLoading(true);
         const data = await getAllTasks();
         setIsLoading(false);
         setTasks(data.tasks);
