@@ -35,6 +35,12 @@ const deleteTask = async (id) => {
   await fetch(`https://task-manager-api-3h34.onrender.com/api/v1/tasks/${id}`, {
     method: "DELETE",
   });
+
+  if (response.ok) {
+    toast.success("Task has been deleted.");
+  } else {
+    toast.error("Something went wrong.");
+  }
 };
 
 const editTask = async (values, id) => {
