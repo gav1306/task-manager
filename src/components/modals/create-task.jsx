@@ -86,7 +86,7 @@ const CreateTaskModal = (props) => {
     >
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Add a new task</DialogTitle>
+          <DialogTitle>{isEdit.enable ? 'Edit a task': 'Add a new task'}</DialogTitle>
         </DialogHeader>
 
         <Form {...form}>
