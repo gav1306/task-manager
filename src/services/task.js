@@ -32,7 +32,7 @@ const getAllTasks = async () => {
 };
 
 const deleteTask = async (id) => {
-  await fetch(`https://task-manager-api-3h34.onrender.com/api/v1/tasks/${id}`, {
+ const response = await fetch(`https://task-manager-api-3h34.onrender.com/api/v1/tasks/${id}`, {
     method: "DELETE",
   });
 
