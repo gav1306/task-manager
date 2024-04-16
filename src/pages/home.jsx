@@ -84,7 +84,7 @@ const Home = (props) => {
       <ScrollArea
         className={cn(
           "rounded-md border w-[800px] m-auto shadow-md md:shadow-xl py-2 overflow-clip relative",
-          tasks.length === 0 ? "" : "h-[300px]"
+          (isLoading || tasks.length === 0) ? "" : "h-[300px]"
         )}
       >
         <Table>
