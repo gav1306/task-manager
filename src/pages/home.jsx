@@ -40,17 +40,11 @@ const Home = (props) => {
   };
 
   const deleteHandler = async (id) => {
-    toast.promise(deleteTask.bind(null, id), {
-      loading: "Task Deleting...",
-      success: async () => {
-        setIsLoading(true);
-        const data = await getAllTasks();
-        setIsLoading(false);
-        setTasks(data.tasks);
-        return `Task has been deleted`;
-      },
-      error: "Something went wrong",
-    });
+    await deleteTask(id)
+    setIsLoading(true);
+    const data = await getAllTasks();
+    setIsLoading(false);
+    setTasks(data.tasks);
 
   };
 
